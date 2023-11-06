@@ -1,0 +1,19 @@
+.questions {
+	@include adaptiveValue("padding-top", 84, 32);
+	@include adaptiveValue("padding-bottom", 84, 32);
+	// .questions__container
+	&__container {}
+	// .questions__title-block
+	&__title-block {}
+	// .questions__spollers
+	&__spollers {}
+}
+
+.spollers-question {
+	// .spollers-question__item
+	&__item {}
+	// .spollers-question__title
+	&__title {}
+	// .spollers-question__body
+	&__body {}
+}
