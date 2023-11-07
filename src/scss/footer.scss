@@ -1,3 +1,212 @@
-//====================================================================================================
+.footer {
+	color: #fff;
+	background-color: $accentColor;
+	// .footer__container
+	&__container {
+	}
+	// .footer__content
+	&__content {
+		@include adaptiveValue("padding-top", 52, 40);
+		@include adaptiveValue("padding-bottom", 74, 40);
+	}
+	// .footer__subscribe
+	&__subscribe {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 54, 30);
+		}
+	}
+	// .footer__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		gap: toRem(30);
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+	// .footer__info
+	&__info {
+		display: grid;
+		@include adaptiveValue("gap", 32, 20);
+		max-width: toRem(460);
+	}
+	// .footer__logo
+	&__logo {
+	}
+	// .footer__text
+	&__text {
+	}
+	// .footer__social
+	&__social {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(24);
+		row-gap: toRem(6);
+	}
+	// .footer__menu
+	&__menu {
+	}
+	// .footer__copy
+	&__copy {
+		border-top: toRem(1) solid rgba(255, 255, 255, 0.3);
+		padding-top: toRem(32);
+		padding-bottom: toRem(32);
+		text-align: center;
+	}
+}
+.subscribe {
+	display: grid;
+	grid-template-columns: auto toRem(516);
+	gap: toRem(24);
+	padding: toRem(24);
+	border-radius: toRem(24);
+	background: #4ac9ff;
+	@media (max-width: $tablet) {
+		grid-template-columns: auto;
+	}
+	@media (max-width:$mobileSmall){
+		margin: 0 toRem(-15);
+		border-radius: 0;
+		padding: toRem(15);
+	}
+	// .subscribe__body
+	&__body {
+	}
+	// .subscribe__title
+	&__title {
+		font-size: toRem(24);
+		line-height: 133%;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	// .subscribe__text
+	&__text {
+	}
+	// .subscribe__form
+	&__form {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: toRem(12);
+		border-radius: toRem(60);
+		background-color: #fff;
+		@media (max-width:$mobileSmall){
+			flex-direction: column;
+			gap: toRem(10);
+			border-radius: toRem(10);
+			overflow: hidden;
+		}
+		.form__error {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color: #fff;
+			padding: toRem(8);
+			font-size: toRem(12);
+			border-radius: toRem(15);
+			background-color: $mainColor;
+			transform: translate(10%, -50%);
+		}
+	}
+	// .subscribe__input
+	&__input {
+		flex: 1 1 auto;
+		padding: toRem(12);
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+	// .subscribe__btn
+	&__btn {
+	}
+}
 
-//====================================================================================================
+.footer-logo {
+}
+.social {
+	// .social__item
+	&__item {
+	}
+	// .social__link
+	&__link {
+	}
+}
+.menu-footer {
+	// .menu-footer__spollers
+	&__spollers {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap", 130, 20);
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	// .menu-footer__block
+	&__block {
+	}
+	// .menu-footer__title
+	&__title {
+		list-style: none;
+		font-size: toRem(24);
+		line-height: 133.33%;
+		font-weight: 700;
+		&::marker {
+			display: none;
+		}
+		._spoller-init & {
+			position: relative;
+			padding-right: toRem(30);
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: toRem(0);
+				top: 50%;
+				background-color: #fff;
+				height: toRem(2);
+				width: toRem(8);
+				transition: transform 0.5s ease 0s;
+			}
+			&::before {
+				transform: translate(-75%, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+			&._spoller-active {
+				&::before {
+					transform: translateX(-75%) rotate(-45deg);
+				}
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	// .menu-footer__list
+	&__list {
+		display: grid;
+		gap: toRem(12);
+		padding-top: toRem(24);
+	}
+	// .menu-footer__item
+	&__item {
+	}
+	// .menu-footer__link
+	&__link {
+		font-size: 20px;
+		line-height: 160%;
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

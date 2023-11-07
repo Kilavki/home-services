@@ -32,6 +32,10 @@
 		}
 	}
 	&--min {
+		padding: toRem(12) toRem(36);
+		font-size: toRem(18);
+		line-height: 133.33%;
+		min-height: 0;
 		span {
 			// padding: toRem(16);
 		}
