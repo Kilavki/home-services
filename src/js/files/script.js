@@ -5,7 +5,7 @@ import { flsModules } from "./modules.js";
 
 
 const blogItems = document.querySelector('.blog__items');
-
+let counter = 3;
 if (blogItems) {
 	loadBlogItems();
 }
@@ -23,10 +23,14 @@ async function loadBlogItems() {
 }
 
 function initBlog(data) {
-	for (let index = 0; index < 3; index++) {
-		const item = data.items[index];
-		buildBlogItem(item);
-	}
+	for (let index = 0; index < counter; index++) {
+			const item = data.items[index];
+			console.log(item);
+			buildBlogItem(item);
+		}
+		// data.items.forEach((item, index) => {
+		// 	console.log(item.id);
+		// });
 }
 
 function buildBlogItem(item) {
