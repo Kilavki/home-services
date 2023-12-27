@@ -25,6 +25,7 @@ if (!pugPages.length) {
 		replace: [
 			{ regex: '../img', to: 'img' },
 			{ regex: '@img', to: 'img', },
+			{ regex: '@pic', to: 'img', },
 			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
 		],
 	})]

@@ -51,7 +51,7 @@
 	}
 	// .talk__image
 	&__image {
-		img {
+		.talk-pic {
 			max-width: 100%;
 		}
 		@media (min-width:$tablet){
@@ -62,7 +62,7 @@
 			grid-template-columns: repeat(2, 1fr);
 			@include adaptiveValue("gap", 100, 50);
 			width: 100%;
-			img{
+			.talk-pic {
 				grid-column: 2 / 3;
 				justify-self: end;
 			}
