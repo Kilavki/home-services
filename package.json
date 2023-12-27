@@ -17,8 +17,10 @@
 		"devbuild": "gulp build --build --nowebp",
 		"noimgbuild": "gulp build --build --noimgopt",
 		"tmp": "gulp -f gulpfile.tmp.js",
-		"bem": "fls-bemtree-from-html"
+		"bem": "fls-bemtree-from-html",
+		"gh-deploy": "gh-pages -d dist"
 	},
+	"homepage": "git@github.com:Kilavki/home-services.git",
 	"devDependencies": {
 		"@babel/cli": "latest",
 		"@babel/core": "latest",
@@ -35,6 +37,7 @@
 		"eslint-plugin-react-hooks": "latest",
 		"eslint-plugin-react-refresh": "latest",
 		"file-include-webpack-plugin-replace": "latest",
+		"gh-pages": "^6.1.1",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
