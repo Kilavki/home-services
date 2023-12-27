@@ -1699,7 +1699,7 @@ textarea.input {
           justify-content: flex-start;
 }
 
-.talk__image img {
+.talk__image .talk-pic {
   max-width: 100%;
 }
 
@@ -1838,7 +1838,7 @@ textarea.input {
     width: 100%;
   }
 
-  .talk__image img {
+  .talk__image .talk-pic {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
